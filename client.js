@@ -8,6 +8,14 @@ const connect = function() {
     port: 50541
   });
 
+  conn.on('connect', () => {
+    console.log('Successfully connected to game server');
+  });
+
+  conn.on('connect', () => {
+    conn.write('Name: CRT');
+  });
+
   conn.on('data', (data) => { // event handlers to handle income data and console.log it for the player
     console.log('Server says: ', data);
   });
