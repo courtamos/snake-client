@@ -24,18 +24,47 @@ const handleUserInput = (key) => { // once called by key, execute this block
     console.log('exiting now...');
     process.exit();
   }
+
   if (key === 'w') {
     connection.write("Move: up");
   }
+
   if (key === 'a') {
     connection.write("Move: left");
   }
+
   if (key === 's') {
     connection.write("Move: down");
   }
+
   if (key === 'd') {
     connection.write("Move: right");
   }
+
+  if (key === '1') {
+    connection.write('Say: GO!');
+  }
+
+  if (key === '2') {
+    connection.write('Say: YAY');
+  }
+
+  if (key === '3') {
+    connection.write('Say: SO FUN');
+  }
+
+  if (key === '4') {
+    connection.write('Say: OOPS...');
+  }
+
+  if (key === '5') {
+    connection.write('Say: WIN!');
+  }
+
+  if (key === '6') {
+    connection.write('Say: U GUD');
+  }
+
 };
 
 module.exports = { setupInput }; // exporting setupInput into a module
